@@ -1,16 +1,12 @@
 .head {
   border-bottom: 1px solid #ececec;
-}
 
-.container-head {
-  width: 1170px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav {
-  display: flex;
+  &-container {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .nav-link,
@@ -24,78 +20,84 @@
   margin-left: 50px;
 }
 
-.nav-mail {
-  color: $primary-text-color;
-}
-
-.nav-link-active {
-  position: relative;
-
-  display: inline-block;
-  color: $primary-accent-color;
-}
-
-.nav-link-active::after {
-  position: absolute;
-  left: 0;
-  bottom: -32px;
-
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: $primary-accent-color;
-}
-
-.nav-link:hover,
-.nav-link:focus,
-.nav-mail:hover,
-.nav-mail:focus,
-.nav-tel:hover,
-.nav-tel:focus {
-  transition: $hover-animation;
-  color: $primary-accent-color;
-}
-
-.contacts-nav {
+.nav {
   display: flex;
-  align-items: center;
+
+  &-mail {
+    color: $primary-text-color;
+  }
+
+  &-link-active {
+    position: relative;
+
+    display: inline-block;
+    color: $primary-accent-color;
+  }
+
+  &-link-active::after {
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $primary-accent-color;
+  }
+
+  &-link:hover,
+  &-link:focus,
+  &-mail:hover,
+  &-mail:focus,
+  &-tel:hover,
+  &-tel:focus {
+    transition: $hover-animation;
+    color: $primary-accent-color;
+  }
+
+  &-tel {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $primary-text-color;
+    margin-left: 10px;
+    margin-right: 30px;
+  }
+
+  &-contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &-contacts:hover,
+  &-contacts:focus {
+    transition: $hover-animation;
+    color: $primary-accent-color;
+  }
+
+  &-icon-tel {
+    margin-left: 30px;
+  }
+
+  &-icon-mail {
+    margin-left: 305px;
+  }
+
+  &-mail {
+    margin-left: 10px;
+  }
 }
 
-.contacts-nav:hover,
-.contacts-nav:focus {
-  transition: $hover-animation;
-  color: $primary-accent-color;
-}
-
-.nav-tel {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-align: left;
-  color: $primary-text-color;
-  margin-left: 10px;
-  margin-right: 30px;
+.icon-mail,
+.icon-tel {
+  fill: currentColor;
 }
 
 .items {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.nav-icon-tel {
-  margin-left: 30px;
-}
-.icon-mail,
-.icon-tel {
-  fill: currentColor;
-}
-
-.nav-icon-mail {
-  margin-left: 305px;
-}
-.nav-mail {
-  margin-left: 10px;
 }

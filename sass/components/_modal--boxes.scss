@@ -19,35 +19,14 @@
   margin-top: 30px;
   margin-left: 165px;
   margin-right: 163px;
-}
 
-.btn-modal-send:hover {
-  background-color: #188ce8;
+  &:hover {
+    background-color: #188ce8;
+  }
 }
 
 .checkbox {
   padding-left: 1.2em;
-}
-
-.form-input-check {
-  position: absolute;
-  opacity: 0;
-  margin-left: 3.3em;
-  margin-top: 5px;
-}
-
-.form-input-check:checked + .custom-box {
-  border-radius: 2px;
-  background-image: url(../images/Rectangle.svg);
-}
-
-.form-input-check:checked:focus + .custom-box {
-  border-radius: 0.05em;
-  background-image: url(../images/Rectangle.svg);
-}
-
-.form-input-check:focus + .custom-box {
-  background-image: url(../images/empty-checkbox-blue.svg);
 }
 
 .custom-box {
@@ -59,6 +38,27 @@
   background-image: url(../images/empty-checkbox.svg);
   background-repeat: no-repeat;
   pointer-events: none;
+}
+
+.form-input-check {
+  position: absolute;
+  opacity: 0;
+  margin-left: 3.3em;
+  margin-top: 5px;
+
+  &:checked + .custom-box {
+    border-radius: 2px;
+    background-image: url(../images/Rectangle.svg);
+  }
+
+  &:checked:focus + .custom-box {
+    border-radius: 0.05em;
+    background-image: url(../images/Rectangle.svg);
+  }
+
+  &:focus + .custom-box {
+    background-image: url(../images/empty-checkbox-blue.svg);
+  }
 }
 
 .form-field-label {
@@ -82,8 +82,8 @@
   letter-spacing: 0.03em;
   color: $primary-text-color;
   margin-left: 14%;
-}
 
-.form-field-agreement a {
-  color: $primary-accent-color;
+  & a {
+    color: $primary-accent-color;
+  }
 }

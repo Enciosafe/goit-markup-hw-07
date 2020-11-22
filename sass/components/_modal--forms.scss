@@ -13,12 +13,30 @@
   padding-left: 42px;
 }
 
-.form-field-label a {
-  color: $primary-accent-color;
+.modal-form-input::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.166px;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+
+  transition: opacity 0.3s ease;
+}
+
+.modal-form-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .form-field {
   position: relative;
+
+  &-label a {
+    color: $primary-accent-color;
+  }
 }
 
 .modal-form-icon {
@@ -55,22 +73,4 @@
   margin-bottom: 20px;
 
   color: var(--hr-text-color);
-}
-
-.modal-form-input::-webkit-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.166px;
-  letter-spacing: 0.01em;
-  padding-top: 5px;
-
-  transition: opacity 0.3s ease;
-}
-
-.modal-form-input:focus::-webkit-input-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
